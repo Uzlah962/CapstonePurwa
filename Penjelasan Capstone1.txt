@@ -1,0 +1,54 @@
+Fitur 1: Tambah Buku (create_book)
+Fungsi create_book() meminta pengguna untuk memasukkan judul dan penulis buku baru.
+Melakukan loop melalui setiap buku dalam daftar books untuk memeriksa apakah judul buku sudah ada. Jika sudah ada, mencetak pesan bahwa data sudah ada dan fungsi berakhir.
+Jika judul buku belum ada, mengonfirmasi penambahan buku baru dengan meminta input dari pengguna ('Y' atau 'N').
+Jika konfirmasi adalah 'Y' atau 'y', menambahkan buku baru ke dalam daftar books dengan format yang sesuai, kemudian mencetak pesan bahwa buku telah ditambahkan.
+Jika konfirmasi bukan 'Y' atau 'y', mencetak pesan bahwa penambahan buku dibatalkan.
+
+Fitur 2: Lihat Semua Buku (read_all_books)
+Fungsi read_all_books() mencetak semua buku yang tersedia dalam daftar books, serta buku yang sedang dipinjam dalam daftar borrowed_books.
+Menggunakan variabel available_books dan borrowed_books_found untuk menentukan apakah ada buku yang tersedia atau sedang dipinjam.
+Jika tidak ada buku yang tersedia, mencetak pesan bahwa tidak ada buku yang tersedia.
+Jika tidak ada buku yang sedang dipinjam, mencetak pesan bahwa tidak ada buku yang sedang dipinjam.
+
+Fitur 3: Cari Buku (read_specific_book)
+Fungsi read_specific_book() meminta pengguna untuk memasukkan judul buku yang ingin dicari.
+Melakukan iterasi melalui setiap buku dalam daftar books.
+Jika judul buku cocok dengan input pengguna, mencetak detail buku. Jika buku tersebut sedang dipinjam, detail buku dicetak dalam warna yang berbeda.
+Jika buku tidak ditemukan, mencetak pesan bahwa buku tidak ditemukan.
+
+Fitur 4: Ubah Detail Buku (update_book)
+Fungsi update_book() meminta pengguna untuk memasukkan judul buku yang ingin diubah.
+Melakukan iterasi melalui setiap buku dalam daftar books.
+Jika judul buku diawali dengan input pengguna, mencetak detail buku saat ini.
+Menggunakan variabel new_title dan new_author untuk menyimpan input pengguna yang baru untuk judul dan penulis buku.
+Mengonfirmasi perubahan kepada pengguna dan melakukan perubahan jika disetujui.
+Jika buku tidak ditemukan, mencetak pesan bahwa buku tidak ditemukan.
+
+Fitur 5: Hapus Buku (delete_book)
+Fungsi delete_book() meminta pengguna untuk memasukkan judul buku yang ingin dihapus.
+Melakukan iterasi melalui setiap buku dalam daftar books.
+Jika judul buku cocok dengan input pengguna, meminta konfirmasi pengguna untuk menghapus buku.
+Jika pengguna setuju, menghapus buku dari daftar books menggunakan del dan mengembalikan.
+Jika pengguna tidak setuju atau judul buku tidak ditemukan, mencetak pesan yang sesuai.
+
+Fitur 6: Pinjam Buku (borrow_book)
+Fungsi borrow_book() menampilkan semua buku yang tersedia menggunakan fungsi read_all_books().
+Meminta pengguna untuk memasukkan judul buku yang ingin dipinjam.
+Melakukan iterasi melalui setiap buku dalam daftar books.
+Jika judul buku diawali dengan input pengguna, menanyakan kepada pengguna apakah ingin meminjam buku tersebut.
+Jika pengguna setuju, menambahkan buku ke daftar borrowed_books, menghapusnya dari books, dan mencetak pesan konfirmasi.
+Jika pengguna tidak setuju atau judul buku tidak ditemukan, mencetak pesan yang sesuai.
+
+Fitur 7: Kembalikan Buku (return_book)
+Fungsi return_book() menampilkan semua buku yang tersedia dan buku yang sedang dipinjam menggunakan fungsi read_all_books().
+Meminta pengguna untuk memasukkan judul buku yang ingin dikembalikan.
+Melakukan iterasi melalui setiap buku yang dipinjam dalam daftar borrowed_books.
+Jika judul buku diawali dengan input pengguna, mengembalikan buku ke daftar books, menghapusnya dari borrowed_books, dan mencetak pesan konfirmasi.
+Jika buku tidak ditemukan atau belum dipinjam, mencetak pesan yang sesuai.
+
+Fungsi Utama (main())
+Fungsi main() adalah fungsi utama yang menjalankan program.
+Menampilkan menu perpustakaan dan meminta input dari pengguna.
+Memanggil fungsi yang sesuai berdasarkan pilihan pengguna.
+Jika pengguna memilih opsi "8", program akan keluar.
